@@ -1,0 +1,23 @@
+@import './scss/reset';
+@import './scss/variables';
+@import './scss/mixin';
+
+body{
+  font-family: $font-family;
+  line-height: 1;
+  color: $text-color;
+  height: 100vh;
+  background-color: $primary-color;
+
+}
+
+a{
+  text-decoration: none;
+  color: $text-color;
+}
+
+h1,h2,h3{
+  font-weight: 400;
+}
+
+

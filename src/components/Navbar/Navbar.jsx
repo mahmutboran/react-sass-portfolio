@@ -1,35 +1,57 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import "./Navbar.scss"
+import "./Navbar.scss";
 
 const Navbar = () => {
   return (
-    <div>
-      <nav className="nav">
-        <ul className="nav__list">
-          <li className="nav__item">
-            <Link to="/" className="nav__link">
-              Home
-            </Link>
-          </li>
-          <li className="nav__item">
-            <NavLink to="/about" className="nav__link nav__link--active">
-              About Me
-            </NavLink>
-          </li>
-          <li className="nav__item">
-            <Link to="/projects" className="nav__link">
-              My Projects
-            </Link>
-          </li>
-          <li className="nav__item">
-            <Link to="/contact" className="nav__link">
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav className="nav">
+      <ul className="nav__list">
+        <li className="nav__item">
+          <NavLink
+            to="/"
+            className="nav__link"
+            style={({ isActive }) => {
+              return { color: isActive ? "#ff652f" : "inherit" };
+            }}
+          >
+            Home
+          </NavLink>
+        </li>
+        <li className="nav__item">
+          <NavLink
+            to="/about"
+            className="nav__link nav__link--active"
+            style={({ isActive }) => {
+              return { color: isActive ? "#ff652f" : "inherit" };
+            }}
+          >
+            About Me
+          </NavLink>
+        </li>
+        <li className="nav__item">
+          <NavLink
+            to="/projects"
+            className="nav__link"
+            style={({ isActive }) => {
+              return { color: isActive ? "#ff652f" : "inherit" };
+            }}
+          >
+            My Projects
+          </NavLink>
+        </li>
+        <li className="nav__item">
+          <NavLink
+            to="/contact"
+            className="nav__link"
+            style={({ isActive }) => {
+              return { color: isActive ? "#ff652f" : "inherit" };
+            }}
+          >
+            Contact
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
   );
 };
 

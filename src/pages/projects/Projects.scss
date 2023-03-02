@@ -7,6 +7,7 @@
 .project-bgImg-container{
     // border: 2px solid red;
     @include bgImg(40vh, $main-bgImg-path);
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -17,6 +18,7 @@
 }
 
 .projects{
+  margin-top: 40vh;
     &__items{
         width: 100%;
         display: flex;

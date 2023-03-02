@@ -3,7 +3,7 @@ import React from "react";
 
 import "./NotFound.css";
 import {NavLink} from "react-router-dom";
-const NotFound = () => {
+const NotFound = ({setShow,show}) => {
   return (
     <section className="page_404">
       <div className="container">
@@ -19,7 +19,7 @@ const NotFound = () => {
 
                 <p>The page you are looking for not available!</p>
 
-                <NavLink to="/" className="link_404">
+                <NavLink to="/" className="link_404" onClick={()=>{setShow(!show)}}>
                   Go to Home
                 </NavLink>
               </div>

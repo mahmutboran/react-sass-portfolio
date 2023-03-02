@@ -12,20 +12,28 @@ import Home from './pages/home/Home';
 import Contact from './pages/contact/Contact';
 import Projects from './pages/projects/Projects';
 import NotFound from './components/Error/NotFound';
+import { useState } from 'react';
 
 function App() {
+  const [show, setShow] = useState(true)
+
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
+        {
+          show && <Navbar />
+
+        }
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home  />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="projects" element={<Projects />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFound setShow={setShow} show={show} />} />
         </Routes>
-        <Footer />
+        {
+          show && <Footer setShow={setShow} show={show} />
+        }
       </BrowserRouter>
     </div>
   );

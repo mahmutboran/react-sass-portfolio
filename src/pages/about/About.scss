@@ -5,20 +5,17 @@
 @import "../../scss/variables";
 
 .about-bgImg-container{
-    @include bgImg(50vh, $main-bgImg-path);
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-
     .about__bio-image{
         text-align: center;
-
         h2{
             font-size: 3rem;
             color: $secondary-color;
         }
-
         p{
             font-size: 1.2rem;
             margin: 2rem;
@@ -29,6 +26,8 @@
 }
 
 .about{
+    background-color: $primary-color;
+    height: 90vh;
     &__container{
         // border: 2px solid red;
         width: 70vw;
@@ -43,7 +42,6 @@
 
         h2,h3{
             margin: 0.5rem 0;
-
         }
 
         h6{

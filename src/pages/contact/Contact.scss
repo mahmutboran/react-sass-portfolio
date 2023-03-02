@@ -4,17 +4,12 @@
 @import "../../scss/mixin";
 @import "../../scss/variables";
 
-.contact-bgImg-container{
-    @include bgImg(100vh, $main-bgImg-path);
-    nav{
-        // border:2px solid red;
-        height: 40vh;
-    }
-}
+
 
 .contact{
     //border:2px solid red;
     height: 40vh;
+    margin-top: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
